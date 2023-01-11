@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>CSS 선택자</title>
+    <style>
+      /* 후손 선택자 : 상위선택자 하위선택자 */
+      div span { color: orange; font-weight: bold }
+
+      /* 자손 선택자 : 상위선택자 > 하위선택자 */
+      /* div 직계 span에 스타일 적용 */
+      div > span { color: indianred; background: darkred; font-style: italic;}
+      /* div 직계 span의 후손 span들에 스타일 적용 */
+      div > span span { color: orange; background: darkorange; font-style: initial }
+
+      /* ul 직계 li에 스타일 적용 */
+      ul > li { background: pink; color: deeppink; font-style: italic;}
+      /* ul 직계 li의 후손 li에 스타일 적용 */
+      ul > li li { color: black; font-style: italic; background: yellow;}  /*이부분 다시 설명 예정, 더 좋은 아이디어 있으면 tell me*/
+
+      /* 그룹 선택자 : 선택자1, 선택자2 */
+      /* span { background: ivory;}
+          li { background: ivory;} => 따로 쓸 수도 있고 콤마로 같이 쓸 수 있음*/
+      span, li { background: ivory;}
+
+      /* 동적의사 선택자 : link, visited, hover, active, focus */
+      a:link { color : black; text-decoration: none;}    /*클릭전*/
+      a:visited { color : black; text-decoration: none;} /*방문후*/
+      a:hover { color : orange; text-decoration: underline;} /*마우스 올리기*/
+      a:active { color : blue; text-decoration: underline;}  /*마우스 클릭하고 있을 때*/
+
+      input:hover {background: aliceblue;}    /*마우스 올리면 인풋창 배경색이 바뀜*/
+      input:focus {background: lemonchiffon;} /*마우스 클릭해서 focus가 잡혔을 때 인풋창 배경색이 바뀜*/
+
+      /* 상태의사 선택자 : checked, enabled, disabled*/
+      input:checked {box-shadow: 0 0 0 8px hotpink}
+      input:checked + label {  /* '+'는 한개의 형제만, '~'그 뒤 나머지 형제들 모두 */
+            color: firebrick; background: yellow}
+
+      /* 구조적 의사 선택자 : first-child, last-child, nth-child, nth-of-type */
+      #maker > li { color: purple; background: white;}
+      #maker > li:first-child { color: red; background: white;}
+      #maker > li:last-child { color: green; background: white;}
+      #maker > li:nth-child(3) { color: blue; background: white;}
+      #maker > li:nth-of-type(4) { color: orange; background: white;}
+
+    </style>
+  </head>
+  <body>
+    <h1>CSS 선택자</h1>
+    <h2>조합(결합) 선택자</h2>
+    <p>스타일을 적용할 대상이 하나 이상인 경우에 사용하는 선택자</p>
+
+    <img src="img/combine.png">
+
+    <p>후손descendant 선택자 : 해당 요소 직계 아래에 있는 모든 하위 요소들을 대상으로 하는 선택자</p>
+
+
+    <div>
+      <span>얼마나 심장은 동산에는 거친 대한 그들의 커다란 이것이다.
+        <span>따뜻한 불어 설레는 옷을 보이는 희망의 보는 두손을 있으랴?</span>
+        <span>있음으로써 예가 가치를 새가 그들의 광야에서 앞이 이상의 꾸며 봄바람이다.</span>
+        <span>오아이스도 끓는 끝까지 이 힘차게 평화스러운 두손을 약동하다.</span>
+      </span>
+      <span>끝까지 굳세게 뼈 풀이 얼음과 따뜻한 놀이 청춘 지혜는 때문이다.</span>
+      <span>길을 않는 사는가 미인을 그리하였는가?</span>
+    </div>
+
+    <p>자식child 선택자 : 해당 요소 직계 아래에 있는 하위 요소들을 대상으로 하는 선택자</p>
+
+    <ul>
+      <li>한식
+        <ul>
+          <li>비빔밥</li>
+          <li>떡국</li>
+        </ul>
+      </li>
+      <li>라면</li>
+      <li>돈까스</li>
+    </ul>
+
+    <p>그룹 선택자 : 여러 선택자를 혼합해서 요소들을 지정할때 사용하는 선택자</p>
+
+    <h2>가상(pseudo: 의사) 선택자</h2>
+    <p>특정 태그에 미리 정의된 선택자를 부르는 말</p>
+
+    <p>동적의사 클래스 선택자 : 마우스 이벤트에 의해 스타일을 다르게 적용하고 싶을때 사용하는 선택자</p>
+    <a href="#">네이버로 이동</a>
+    <a href="#">구글로 이동</a>
+    <input type="text">
+    <input type="password">
+
+    <p>상태의사 클래스 선택자 : 폼의 상태에 따라 스타일을 다르게 적용하고 싶을때 사용하는 선택자</p>
+    <div><input type="radio"><label>여자asdfsdfsdfsdfsdfeㄷㄿㄷㄹㄷㅍ</label>
+          <input type="radio"><label>남자</label></div>
+
+
+    <p>구조적 의사 클래스 선택자 : html 요소의 계층적 구조에서 특정 위치에 있는 요소를 선택할때 사용하는 선택자</p>
+    <ul id="maker">
+      <li>삼성</li>
+      <li>LG</li>
+      <li>애플</li>
+      <li>샤오미</li>
+      <li>구글</li>
+    </ul>
+
+
+  </body>
+</html>
