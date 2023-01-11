@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+      <meta charset="UTF-8">
+      <title>CSS 텍스트 관련 속성</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- index에서 viewport +3줄 복붙해옴-->
+
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/main.css">
+
+      <style>
+        #font p:first-child         /* html 기본 폰트 크기 : 16px (0.42cm) */
+            { font-size: 35px; background: yellow;}
+        #font p:nth-child(2)        /* font-family: 글꼴1, 대체글꼴1, ... */
+            { font-family: 궁서체1, 굴림체; font-size: 20px; background: greenyellow;}
+        #font p:nth-child(3)        /* font-weight: bold 또는 normal : ctrl + 스페이스바 누르면 여러 메뉴 뜬다 */
+            { font-weight: bold; font-size: 20px; font-family: 궁서체; background: aliceblue; }
+        #font p:nth-child(4)        /* style */
+            { font-style: italic; font-size: 20px; font-family: 돋움체; background: cornsilk;  }
+        #font p:nth-child(5)        /* 단축표기 : 스타일 대소문자변환 굵기 크기 줄간격 종류-빠지더라도 순서에 맞춰야함 */
+            {
+                font: italic bold 26px 궁서체;
+                background: cornsilk;
+            }
+        /*{ font-style: italic; font-size: 20px; font-family: 돋움체; background: cornsilk;  }*/
+
+        /* 텍스트 줄간격 : 기본값 = 120% */
+        #line p {width: 50%}
+        #line p:first-child {line-height: 180%;}
+        #line p:nth-child(2) {line-height: 100%;}
+        #line p:last-child {line-height: 500%;}
+
+        /* 글자간 간격 조정 */
+        #logo p:first-child{ letter-spacing: 20px }
+        #logo p:nth-child(2){ letter-spacing: 20px }
+        #logo p:last-child{ letter-spacing: -5px }
+
+        /* 단어간 간격 조정 */
+        #logo2 p:first-child{ word-spacing: 20px }
+        #logo2 p:nth-child(2){ word-spacing: 20px }
+        #logo2 p:last-child{ word-spacing: -5px }
+
+        /* 텍스트 수평정렬 : center, right, left -공간이 없으면 움직일 수 없어서 span, inline은 정렬안됨, 반드시 block 요소이어야함*/
+        #align p:first-child{ text-align: right; border: 1px solid red; }
+        #align p:nth-child(2){ text-align: center; border: 1px solid red;}
+        #align p:last-child{ text-align: left }
+
+        /* 텍스트 꾸미기 : none, underline, overline, line-through */
+        #deco p:first-child{ text-decoration: underline;  }
+        #deco p:nth-child(2){text-decoration: overline; }
+        #deco p:last-child{ text-decoration: line-through; }
+
+      </style>
+
+  </head>
+  <body>
+    <h1>CSS 텍스트 관련 속성</h1>
+    <h2>개요</h2>
+    <p>텍스트 크기, 글꼴 지정, 스타일, 텍스트의 정렬들을 다룸</p>
+
+    <h2>font-xxx 속성</h2>
+    <p>font-size : 텍스트의 크기 지정</p>
+    <p>font-family : 텍스트의 글꼴 지정</p>
+    <p>font-weight : 텍스트의 진하기 지정</p>
+    <p>font-style : 텍스트의 스타일 지정</p>
+    <p>font-xxx : 텍스트의 단축 표기 : 스타일 대소문자변환 굵기 선간격 종류</p>
+
+    <div id="font">
+        <p>있는 구하기 그들의 사막이다. 군영과 밝은 이상의 위하여서, 능히 이것이다. </p>
+        <p>그것을 가진 놀이 가는 보배를 풍부하게 뼈 능히 새가 피다. 고행을 심장은 예수는 같은 사막이다.</p>
+        <p>전인 하는 피어나는 사라지지 이상, 미인을 작고 청춘 곳이 것이다.</p>
+        <p>대한 같으며, 찾아다녀도, 살 이는 튼튼하며, 열락의 노래하며 날카로우나 때문이다.</p>
+        <p>커다란 못할 찬미를 이상 봄바람이다. 눈이 이상, 뛰노는 있다. 살 찾아 인생의 내는 운다.</p>
+    </div>
+
+    <h2>line-height</h2>
+    <p>텍스트의 줄간격 설정</p>
+    <div id="line">
+        <p>50 끓는 얼음과 보배를 이상, 인생에 이것이다. 시들어 이성은 영락과 위하여 같으며, 낙원을 이것이다.끓는 얼음과 보배를 이상, 인생에 이것이다. 시들어 이성은 영락과 위하여 같으며, 낙원을 이것이다.</p>
+        <p>180 품었기 고행을 설레는 예가 노년에게서 풀이 귀는 그리하였는가? 석가는 인간의 오직 교향악이다. 품었기 고행을 설레는 예가 노년에게서 풀이 귀는 그리하였는가? 석가는 인간의 오직 교향악이다.</p>
+        <p>100 사랑의 우리의 가는 인류의 사람은 같지 품으며, 얼음이 칼이다. 사랑의 우리의 가는 인류의 사람은 같지 품으며, 얼음이 칼이다. 사랑의 우리의 가는 인류의 사람은 같지 품으며, 얼음이 칼이다.</p>
+        <p>500 커다란 못할 찬미를 이상 봄바람이다. 눈이 이상, 뛰노는 있다. 살 찾아 인생의 내는 운다.사랑의 우리의 가는 인류의 사람은 같지 품으며, 얼음이 칼이다. 사랑의 우리의 가는 인류의 사람은 같지 품으며, 얼음이 칼이다. 사랑의 우리의 가는 인류의 사람은 같지 품으며, 얼음이 칼이다.</p>
+    </div>
+
+    <h2>letter-spacing</h2>
+    <p>텍스트내 글자 사이 간격 조정</p>
+    <div id="logo">
+        <p>Marvel's Avengers : Infinity War</p>
+        <p>Ant-Man and the Wasp : Quantumania</p>
+        <p>Ant-Man and the Wasp : Quantumania</p>
+    </div>
+
+    <h2>word-spacing</h2>
+    <p>텍스트내 단어 사이 간격 조정</p>
+    <div id="logo2">
+        <p>Marvel's Avengers : End Game</p>
+        <p>Ant-Man and the Wasp : Quantumania</p>
+        <p>Ant-Man and the Wasp : Quantumania</p>
+    </div>
+
+    <h2>text-align</h2>
+    <p>텍스트의 수평방향 정렬을 설정</p>
+    <div id="align">
+        <p>시간은 금이라구, 친구!</p>
+        <p>시간은 금이라구, 친구!</p>
+        <p>시간은 금이라구, 친구!</p>
+    </div>
+
+    <h2>text-deoration</h2>
+    <p>텍스트의 여러 가지 꾸민 효과를 부여/제거함</p>
+    <div id="deco">
+        <p>시간은 금이라구, 친구!</p>
+        <p>시간은 금이라구, 친구!</p>
+        <p>시간은 금이라구, 친구!</p>
+    </div>
+
+
+
+
+
+  </body>
+</html>
