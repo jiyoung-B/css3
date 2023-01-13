@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/main.css"> <!--상대경로: 상위폴더로 올라가기 ../-->
     <base href="/css3/project1/">
     <style>
+        /* <header> */
         /* 너비 설정, 정중앙 배치, 테두리 표시 */
         #container { border: 1px solid red; width: 950px; margin: 0 auto; }
         /* 높이 지정, 테두리 표시 */
@@ -31,6 +32,7 @@
         /* position: absolute 선언 */
         header div { position: absolute; top: 65px; left: 155px;}
 
+        /* <nav> */
         /* 테두리, 높이 지정 */
         nav { border: 1px solid darkgreen; height: 38px; background: #cccccc }
         nav input, select, button { margin: 2px 0; vertical-align: baseline; padding: 4px;}
@@ -40,6 +42,7 @@
         /* 배경, 글자색,  여백, 마진, 너비, 글꼴크기, 테두리 모서리 지정*/
         nav button { background: #999999; color: white; width: 150px; font-size: 18px; border-radius: 10px; border:1px solid black; margin-top: 3px;}
 
+        /* main - section1 - aside*/
         /* 테두리표시 */
         main { border: 1px solid darkviolet }
         section:first-child {border: 1px solid darkblue; position: relative;}
@@ -51,10 +54,29 @@
         section:first-child aside li { border-bottom: solid black; padding: 8px 10px; }
         /* ul의 마지막 li는 테두리 없음 */
         section:first-child aside li:last-child { border: none; }
-        /*로테이트 이미지 - 테두리, 너비, 배치 위치 지정*/
-        section:first-child div { border: 1px solid darkgoldenrod; width: 73%; position: absolute; right: 0; top:0;}
 
-        section:last-child {}
+        /* main - section1 - rotate*/
+        /*로테이트 이미지 - 테두리, 너비, 배치 위치 지정*/
+        section:first-child div { border: 2px solid black; width: 74%; position: absolute; right: 0; top:0; height: 99%}
+        /* 로테이트 텍스트 - 배치 위치 지정 */
+        section:first-child div p { position: absolute; top: 40%; left: 30%; }
+        /* 버튼들 - 버튼 배치위치지정 */
+        /* 버튼요소 - 버튼 배경색, 여백, 마진 지정 */
+        section:first-child div ul { list-style: none; padding: 0; margin: 0;  position: absolute; bottom: 5%; right: 3%;}
+        section:first-child div ul li { border: 1px solid black; display: inline-block; background: #cccccc; padding: 5px 10px; margin: 5px;}
+
+        /* main - section2*/
+        /* 상품목록 - 테두리 표시 */
+        section:last-child { border: 1px solid darkcyan; }
+        /* 상품목록 배치 - 항목별로 왼쪽 마진 지정 */
+        section:last-child ul { list-style: none; padding: 0; margin: 30px 0;}
+        section:last-child ul li { display: inline-block; margin-left: 4.5%;}
+        /* 상품 링크 - 이미지 크기, 배경 지정 */
+        /* 인라인요소를 블록요소로 변경 */
+        section:last-child ul img { width: 100px; height: 100px; background: #cccccc; border-radius: 10px;}
+        section:last-child ul a { display: block; text-align: center; }
+
+
 
     </style>
 
