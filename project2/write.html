@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>write</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/project2.css">
+
+    <style>
+
+    </style>
+</head>
+<body>
+    <header><h1>JSP 프로젝트 v1</h1></header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="join.html">회원가입</a></li>
+            <li><a href="login.html">로그인</a></li>
+            <li><a href="list.html">게시판</a></li>
+            <li><a href="myinfo.html">회원정보</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+    <main>
+        <h2>새글쓰기</h2>
+        <form name="write">
+        <table>
+            <tr><th><label for="title">제&nbsp;&nbsp;&nbsp;목</label></th><td><input type="text" name="title" id="title"></td></tr>
+            <tr><th><label for="uid">작성자</label></th><td><input type="text" name="uid" id="uid" value="catgirl" readonly></td></tr>
+            <tr><th style="vertical-align: top;"><label for="contents">본&nbsp;&nbsp;&nbsp;문</label></th><td style="border: solid 1px grey;">
+            <tr><td></td><td><textarea name="contents" id="contents" rows="7" cols="55"></textarea></td></tr>
+            <tr><td></td><td colspan="2"><button type="button">목록으로</button></td></tr>
+
+        </table>
+        </form>
+    </main>
+    <footer>
+        <hr>
+        <div class="copy">
+            copyright &copy; 2014. 2017. catgirl. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
