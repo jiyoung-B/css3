@@ -15,11 +15,14 @@
         .board th { padding: 7px; background: lightgoldenrodyellow; }
         .board tr:nth-child(odd) { background: #cef279; }
         .board tr:nth-child(even) { background:  #e4f7ba;}
+        .alignrgt { text-align: right; border: 1px solid black;}
 
-        .pagenation{ list-style: none; padding: 0; margin:0 auto; width: 435px; margin: 0 auto; }
+        .pagenation { list-style: none; padding: 0; margin:0 auto; width: 435px; }
         .pagenation li { display: inline-block; padding: 10px; }
         .cpage { font: bold 20px '맑은고딕'; color: red;}
         .prev { color: #cccccc;}
+        .alignrgt { text-align-last: right;}
+
 
         /*table { outline: 1px solid black; width: 100%; text-align: center;*/
         /*    outline-offset: -1px;}*/
@@ -55,7 +58,7 @@
                 <col style="width: 15%">
                 <col style="width: 10%">
             </colgroup>
-            <tr class="clear"><td colspan="5"><button type="button" onclick="location.href='write.html'">새글쓰기</button></td> </tr>
+            <tr><td colspan="5" class="alignrgt"><button type="button" onclick="location.href='write.html'">새글쓰기</button></td> </tr>
             <tr><th>번호</th><th>제목</th><th>작성자</th><th>작성일</th><th>조회</th></tr>
             <tr><td>1</td><td><a href="view.html?bno=1">시간은 금이라구, 친구!, 진짜라구, 친구, 정말이라구, 친구, 사실이라구, 친구!</a></td><td>catgirl</td><td>2014-05-05</td><td>777</td></tr>
             <tr><td>2</td><td><a href="view.html">시간은 금이라구, 친구!, 진짜라구, 친구, 정말이라구, 친구, 사실이라구, 친구!</a></td><td>catgirl</td><td>2014-05-05</td><td>777</td></tr>
@@ -82,7 +85,6 @@
             <li class="prev">이전</li>
             <li class="cpage">1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li>
             <li>다음</li>
-
         </ul>
         </div>
 
