@@ -138,6 +138,6 @@ a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup><br>
 $a^2 = b^2 + c^2$
 $$x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$$
 $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$
-$$x = {-b \pm \sqrt {b^2-4ac} \over{2a}$$
+### $$x = {-b \pm \sqrt{b^2-4ac} \over{2a}$$
 
 
